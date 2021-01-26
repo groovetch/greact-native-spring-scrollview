@@ -1,5 +1,9 @@
 {
-  "name": "SpringScrollViewExample",
+  "name": "greact-native-spring-scrollview",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groovetch/react-native-spring-scrollview.git"
+  },
   "version": "0.0.1",
   "private": true,
   "scripts": {
