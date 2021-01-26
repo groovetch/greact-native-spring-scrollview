@@ -129,18 +129,19 @@ export class SpringScrollView extends React.PureComponent<SpringScrollViewPropTy
         {this._renderVerticalIndicator()}
       </SpringScrollViewNative>
     );
-    if (Platform.OS === "android") return elements;
-    return (
-      <ScrollView
-        style={wStyle}
-        contentContainerStyle={{ flex: 1 }}
-        keyboardShouldPersistTaps={this.props.keyboardShouldPersistTaps}
-        keyboardDismissMode={this.props.keyboardDismissMode}
-        scrollEnabled={false}
-      >
-        {elements}
-      </ScrollView>
-    );
+    return elements;
+    // if (Platform.OS === "android") return elements;
+    // return (
+    //   <ScrollView
+    //     style={wStyle}
+    //     contentContainerStyle={{ flex: 1 }}
+    //     keyboardShouldPersistTaps={this.props.keyboardShouldPersistTaps}
+    //     keyboardDismissMode={this.props.keyboardDismissMode}
+    //     scrollEnabled={false}
+    //   >
+    //     {elements}
+    //   </ScrollView>
+    // );
   }
 
   _renderRefreshHeader() {
@@ -498,8 +499,8 @@ export class SpringScrollView extends React.PureComponent<SpringScrollViewPropTy
   };
 
   _onTouchBegin = () => {
-    if (TextInputState.currentlyFocusedField())
-      TextInputState.blurTextInput(TextInputState.currentlyFocusedField());
+    if (TextInputState.currentlyFocusedInput())
+      TextInputState.blurTextInput(TextInputState.currentlyFocusedInput());
     this.props.tapToHideKeyboard && Keyboard.dismiss();
     this.props.onTouchBegin && this.props.onTouchBegin();
   };
@@ -518,7 +519,7 @@ export class SpringScrollView extends React.PureComponent<SpringScrollViewPropTy
     inputToolBarHeight: 44,
     tapToHideKeyboard: true,
     initOffset: { x: 0, y: 0 },
-    keyboardShouldPersistTaps: "always",
+    // keyboardShouldPersistTaps: "always",
     showsVerticalScrollIndicator: true,
     showsHorizontalScrollIndicator: true,
     initialContentOffset: { x: 0, y: 0 },
