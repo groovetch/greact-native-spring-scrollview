@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/groovetch/greact-native-spring-scrollview"
   },
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A cross-platform (iOS & Android) spring ScrollView",
   "main": "index.js",
   "scripts": {
