@@ -6,8 +6,8 @@
  * Description:
  */
 
-declare module "react-native-spring-scrollview/Customize" {
-    import { NormalHeader, NormalFooter,RefreshHeader,LoadingFooter } from "react-native-spring-scrollview";
+declare module "greact-native-spring-scrollview/Customize" {
+    import { NormalHeader, NormalFooter,RefreshHeader,LoadingFooter } from "greact-native-spring-scrollview";
 
     export class ChineseNormalHeader extends NormalHeader {}
     export class ChineseNormalFooter extends NormalFooter {}
